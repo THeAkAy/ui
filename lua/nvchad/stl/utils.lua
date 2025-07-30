@@ -158,7 +158,7 @@ M.state = { lsp_msg = "" }
 local spinners = { "", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥", "" }
 
 M.autocmds = function()
-  vim.api.nvim_create_autocmd("LspProgress", {
+  vim.api.nvim_create_autocmd("LspAttach", {
     pattern = { "begin", "report", "end" },
     callback = function(args)
       -- Ensure params exists before accessing its fields
@@ -184,3 +184,4 @@ M.autocmds = function()
 end
 
 return M
+print("👀 Loaded my custom fork of nvchad/ui!")
